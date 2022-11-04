@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>akanName</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3" crossorigin="anonymous"></script>
+
+</head>
+<body>
+    <div class="container" id="formContainer">
+        <h2>Akan Name</h2>
+        <p>This is a web application that takes your birthday and calculates the day of the week you were born and then depending 
+            on you gender outputs your Akan Name. </p>
+        <p>Akan names are derived from Ghanian culture. Frequently in Ghana, children are given their first name as a 'day name' which corresponds to the day in the
+             week they were born. Here are Ghanian day names.</p>
+
+        <form id="form">
+            
+            <div class="mb-3">
+                <label for="century" class="form-label">century</label>
+                <input type="text" id ="century" class="form-control"/>
+            </div>
+            <div class="mb-3">
+                <label for="year" class="form-label">year</label>
+                <input type="text" id ="year" class="form-control"/>
+            </div>
+            <div class="mb-3">
+                <label for="month" class="form-label">month</label>
+                <input type="text" id ="month" class="form-control"/>
+            </div>
+            <div class="mb-3">
+                <label for="day" class="form-label">day</label>
+                <input type="text" id ="day" class="form-control"/>
+            </div>
+
+            <div class="dropdown mb-3">
+                <button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" id="genderDropDown" onchange="genderselected">
+                Gender
+                </button>
+                <ul class="dropdown-menu">
+                <li><a class="dropdown-item" href="#" id="male">Male</a></li>
+                <li><hr class="dropdown-divider"></li>
+                <li><a class="dropdown-item" href="#" id="female">Female</a></li>
+                </ul>
+                <input type="text" class="form-control" aria-label="Text input with dropdown button" id="gender">
+            </div>
+
+            <button type="submit" class="btn btn-primary">Submit</button>
+
+        </form>    
+    </div>
+
+    <script src="./script.js"></script>    
+
+</body>
+</html>
