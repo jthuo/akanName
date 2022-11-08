@@ -9,9 +9,10 @@ userForm.addEventListener('submit', (e)=>{
     let day = document.getElementById("day").value;
 
     d = ( ( (century/4) -2*century-1) + ((5*year/4) ) 
-    + ((26*(month+1)/10)) + day ) % 7;
+    + ((26*(month+1)/10)) + day ) %7;
+     let dayoftheweek = (Math.floor(d))
 
-    alert(d);
+    alert(dayoftheweek);
 
     // display
     document.getElementById('akan').value = year;
