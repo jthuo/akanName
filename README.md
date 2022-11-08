@@ -1,12 +1,12 @@
-# Web portfolio
+# AKAN NAME
 
-#### A Personal portifolio of my work,
+#### This is a web application that takes your birthday and calculates the day of the week you were born and then depending on you gender outputs your Akan Name.  
 
 #### By **James Maina Thuo**
 
 ## Description
 
-This is a web application that takes your birthday and calculates the day of the week you were born and then depending on you gender outputs your Akan Name.  
+This is a web application that takes your birthday and calculates the day of the week you were born and then depending on you gender outputs your Akan Name.Akan names are derived from Ghanian culture. Frequently in Ghana, children are given their first name as a 'day name' which corresponds to the day in the week they were born. Here are Ghanian day names.
 
 ## Setup/Installation Requirements
 
