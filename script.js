@@ -30,9 +30,12 @@ let submitData = () => {
 
 submitData();
 
-function centuryLengthChecker(input){
-    if(input.length < 2){
-        alert('hey pl');
-    }
+function validateForm(){
 
-}
+    var z = document.forms["myForm"]["num"].value;
+  
+    if(!/^[0-9]+$/.test(z)){
+      alert("Please only enter numeric characters only for your Age! (Allowed input:0-9)")
+    }
+  
+  }
