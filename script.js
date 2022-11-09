@@ -6,13 +6,7 @@ function submitFunction(){
   const formValues = getvalues(formElements); 
   daychecker(formValues);
   monthcheck(formValues); 
-//   birthDay(formValues);
   gender(formValues);
-
-  console.log(formValues.day.value);
-//   alert(birthDay);
-//   alert(gender)
-  // alert(calculator.value);
 
 };
 
@@ -34,7 +28,6 @@ function getvalues(input){
 
   const male = document.getElementById("male").value;
   const female = document.getElementById("female").value;
-//   alert(male)
   return{century, year, month, day, male, female};
 }
 
@@ -51,18 +44,8 @@ function monthcheck(formValues){
 
 }
 
-// function birthDay(formValues){
-//   d = ( ( (formValues.century/4) -2*formValues.century-1) + ((5*formValues.year/4) ) 
-//   + ((26*(formValues.month+1)/10)) + formValues.day ) %7;
-//    const dayoftheweek = (Math.floor(d));
-//    return{dayoftheweek};
-// }
-
-
 function gender(formValues){
-    // var genders = document.getElementByName("gender");
-    // alert(document.getElementById("male").value)
-    // alert(birthDay.dayoftheweek.value)
+   
     d = ( ( (formValues.century/4) -2*formValues.century-1) + ((5*formValues.year/4) ) 
   + ((26*(formValues.month+1)/10)) + formValues.day ) %7;
    const birthDay = (Math.floor(d));
