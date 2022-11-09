@@ -1,78 +1,104 @@
-let userForm = document.getElementById("form");
-// console.log(century);
+// const days = ['Sunday', 'Monday', 'Tuesday', 'wednesday', 'Thursday', 'Friday', 'Saturday'];
+const khanMales = ['Kwasi', 'Kwadwo', 'Kwabena', 'Kwaku', 'Yaw', 'Kofi', 'Kwame'];
+const khanFemales = ['Akosua', 'Adwoa', 'Abenaa', 'Akua', 'Yaa', 'Afua', 'Ama'];
+function submitFunction(){
+  const formElements = getFormElements();
+  const formValues = getvalues(formElements); 
+  daychecker(formValues);
+  monthcheck(formValues); 
+//   birthDay(formValues);
+  gender(formValues);
 
-
-
-userForm.addEventListener('submit', (e)=>{
-    e.preventDefault();
-    let century = document.getElementById("century").value;
-    let year = document.getElementById("year").value;
-    let month = document.getElementById("month").value;
-    let day = document.getElementById("day").value;
-    let male = document.getElementById("male");
-    let female = document.getElementById("female");
-
-    if(day<=0 && day>31)
-    alert("day")
-    else
-    alert("enter the correct day")
-
-    if(month<=0 && month>12)
-    alert("month")
-    else
-    alert("enter the correct month")
-
-    alert(day)
-
-
-    // gender
-    if(male.checked==true)
-      alert(male.value);
-      else if(female.checked==true)
-      alert(female.value);
-      else
-      alert("select gender")
-
-    
-
-    alert(selectedGender);
-
-
-
-
-    d = ( ( (century/4) -2*century-1) + ((5*year/4) ) 
-    + ((26*(month+1)/10)) + day ) %7;
-     let dayoftheweek = (Math.floor(d))
-
-    alert(dayoftheweek);
-
-    // display
-    document.getElementById('akan').value = year;
-    console.log(century +" " +year +" " +month +" "+day );
-
-    alert(century);
-
-    let Male = {Sunday:"Kwasi", Monday: "Kwadwo", Tuesday:"Kwabena", Wednesday:"Kwaku", Thursday:"Yaw", Friday:"Kofi", Saturday:"Kwame"};
-
-    let Female = {Sunday:"Akosua", Monday: "Adwoa", Tuesday:"Abenaa", Wednesday:"Akua", Thursday:"Yaa", Friday:"Afua", Saturday:"Ama"};
-
-
-    // document.getElementById("akan").innerHTML = century
-    
-});
-
-let submitData = () => {
+  console.log(formValues.day.value);
+//   alert(birthDay);
+//   alert(gender)
+  // alert(calculator.value);
 
 };
 
-submitData();
+function getFormElements(){
+  const centuryElements = document.getElementById("century");
+  const yearElements = document.getElementById("year");
+  const monthElements = document.getElementById("month");
+  const dayElements = document.getElementById("day");
+  const maleElements = document.getElementById("male");
+  const femaleElements = document.getElementById("female");
+  return{centuryElements, yearElements, monthElements, dayElements, maleElements, femaleElements}
+}
 
-function validateForm(){
+function getvalues(input){
+  const century = document.getElementById("century").value;
+  const year = document.getElementById("year").value;
+  const month = document.getElementById("month").value;
+  const day = document.getElementById("day").value;
 
-    var z = document.forms["myForm"]["num"].value;
-  
-    if(!/^[0-9]+$/.test(z)){
-      alert("Please only enter numeric characters only for your Age! (Allowed input:0-9)")
-    }
-  
+  const male = document.getElementById("male").value;
+  const female = document.getElementById("female").value;
+//   alert(male)
+  return{century, year, month, day, male, female};
+}
+
+function daychecker(formValues){
+  if(formValues.day<=0 || formValues.day>31){
+    alert("enter the correct day");
   }
+
+}
+
+function monthcheck(formValues){
+  if(formValues.month<=0 || formValues.month>12)
+  alert("enter the correct month");
+
+}
+
+// function birthDay(formValues){
+//   d = ( ( (formValues.century/4) -2*formValues.century-1) + ((5*formValues.year/4) ) 
+//   + ((26*(formValues.month+1)/10)) + formValues.day ) %7;
+//    const dayoftheweek = (Math.floor(d));
+//    return{dayoftheweek};
+// }
+
+
+function gender(formValues){
+    // var genders = document.getElementByName("gender");
+    // alert(document.getElementById("male").value)
+    // alert(birthDay.dayoftheweek.value)
+    d = ( ( (formValues.century/4) -2*formValues.century-1) + ((5*formValues.year/4) ) 
+  + ((26*(formValues.month+1)/10)) + formValues.day ) %7;
+   const birthDay = (Math.floor(d));
+
+    if (document.getElementById("male").checked == true) {
+        if (birthDay == 0) {
+            alert("Your Akan name is " + khanMales[0]);
+        } else if (birthDay == 1) {
+            alert("Your Akan name is " + khanMales[1]);
+        } else if (birthDay == 2) {
+            alert("Your Akan name is " + khanMales[2]);
+        } else if (birthDay == 3) {
+            alert("Your Akan name is " + khanMales[3]);
+        } else if (birthDay == 4) {
+            alert("Your Akan name is " + khanMales[4]);
+        } else if (birthDay == 5) {
+            alert("Your Akan name is " + khanMales[5]);
+        } else if (birthDay == 6) {
+            alert("Your Akan name is " + khanMales[6]);
+        }
+    
+    } else if (document.getElementById("female").checked == true) {
+        if (birthDay == 0) {
+            alert("Your Akan name is " + khanFemales[0]);
+        } else if (birthDay == 1) {
+            alert("Your Akan name is " + khanFemales[1]);
+        } else if (birthDay == 2) {
+            alert("Your Akan name is " + khanFemales[2]);
+        } else if (birthDay == 3) {
+            alert("Your Akan name is " + khanFemales[3]);
+        } else if (birthDay == 4) {
+            alert("Your Akan name is " + khanFemales[4]);
+        } else if (birthDay == 5) {
+            alert("Your Akan name is " + khanFemales[5]);
+        } else if (birthDay == 6) {
+            alert("Your Akan name is " + khanFemales[6]);
+        }
+    }
+}
