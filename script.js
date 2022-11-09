@@ -9,12 +9,23 @@ userForm.addEventListener('submit', (e)=>{
     let year = document.getElementById("year").value;
     let month = document.getElementById("month").value;
     let day = document.getElementById("day").value;
-    // let fSex = document.getElementById("checkedFemale").checked;
-    // let mSex = document.getElementById("checkedMale").checked;
-
     let male = document.getElementById("male");
     let female = document.getElementById("female");
 
+    if(day<=0 && day>31)
+    alert("day")
+    else
+    alert("enter the correct day")
+
+    if(month<=0 && month>12)
+    alert("month")
+    else
+    alert("enter the correct month")
+
+    alert(day)
+
+
+    // gender
     if(male.checked==true)
       alert(male.value);
       else if(female.checked==true)
