@@ -36,25 +36,15 @@
                 <input type="number" id ="day" class="form-control" placeholder = "Enter your day of birthday here" maxlength="2"/>
             </div>
 
-            <div class="dropdown mb-3">
-                <!-- <button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" id="genderDropDown" onchange="genderselected">
-                Gender
-                </button>
-                <ul class="dropdown-menu">
-                <li><a class="dropdown-item" href="#" id="male">Male</a></li>
-                <li><hr class="dropdown-divider"></li>
-                <li><a class="dropdown-item" href="#" id="female">Female</a></li>
-                </ul>
-                <input type="text" class="form-control" aria-label="Text input with dropdown button" id="gender"> -->
-
-                    Gender
-                    <select id="gender">
-                      <option value="male">Male</option>
-                      <option value="female">Female</option>
-                    </select>
-
-                    <h3>Selected</h3>
-
+            <div class="dropdown mb-3">     
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="malechecked" id="male" value="male">
+                    <label class="form-check-label" for="formRadioDefault">Male</label>
+                  </div>
+                  <div class="form-check">
+                    <input class="form-check-input" type="radio" name="femalechecked" id="female" value="female">
+                    <label class="form-check-label" for="formRadioChecked">Female</label>
+                  </div>
             </div>
 
             <div class="mb-3">

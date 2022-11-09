@@ -1,12 +1,33 @@
 let userForm = document.getElementById("form");
 // console.log(century);
 
+
+
 userForm.addEventListener('submit', (e)=>{
     e.preventDefault();
     let century = document.getElementById("century").value;
     let year = document.getElementById("year").value;
     let month = document.getElementById("month").value;
     let day = document.getElementById("day").value;
+    // let fSex = document.getElementById("checkedFemale").checked;
+    // let mSex = document.getElementById("checkedMale").checked;
+
+    let male = document.getElementById("male");
+    let female = document.getElementById("female");
+
+    if(male.checked==true)
+      alert(male.value);
+      else if(female.checked==true)
+      alert(female.value);
+      else
+      alert("select gender")
+
+    
+
+    alert(selectedGender);
+
+
+
 
     d = ( ( (century/4) -2*century-1) + ((5*year/4) ) 
     + ((26*(month+1)/10)) + day ) %7;
@@ -19,6 +40,10 @@ userForm.addEventListener('submit', (e)=>{
     console.log(century +" " +year +" " +month +" "+day );
 
     alert(century);
+
+    let Male = {Sunday:"Kwasi", Monday: "Kwadwo", Tuesday:"Kwabena", Wednesday:"Kwaku", Thursday:"Yaw", Friday:"Kofi", Saturday:"Kwame"};
+
+    let Female = {Sunday:"Akosua", Monday: "Adwoa", Tuesday:"Abenaa", Wednesday:"Akua", Thursday:"Yaa", Friday:"Afua", Saturday:"Ama"};
 
 
     // document.getElementById("akan").innerHTML = century
