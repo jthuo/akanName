@@ -32,14 +32,14 @@ function getvalues(input){
 
 function dayValidation(formValues){
   if(formValues.day<=0 || formValues.day>31){
-    alert("enter the correct day");
+    alert("Enter the correct day!");
   }
 
 }
 
 function monthValidation(formValues){
   if(formValues.month<=0 || formValues.month>12)
-  alert("enter the correct month");
+  alert("Enter the correct month!");
 
 }
 
