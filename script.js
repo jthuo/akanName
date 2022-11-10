@@ -49,7 +49,7 @@ function gender(formValues){
     d = ( ( (formValues.century/4) -2*formValues.century-1) + ((5*formValues.year/4) ) 
   + ((26*(formValues.month+1)/10)) + formValues.day ) %7;
    const birthDay = (Math.floor(d));
-   
+
     if (document.getElementById("male").checked == true) {
         if (birthDay == 0) {
             alert("My Akan name is: " + khanMales[0]);
