@@ -22,7 +22,7 @@ No Bugs
 
 ## Technologies Used
 
-It was developed using HTML5 and CSS3.
+It was developed using HTML5,JS and CSS3.
 
 ## Support and contact details
 
