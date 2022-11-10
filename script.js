@@ -1,4 +1,3 @@
-// const days = ['Sunday', 'Monday', 'Tuesday', 'wednesday', 'Thursday', 'Friday', 'Saturday'];
 const khanMales = ['Kwasi', 'Kwadwo', 'Kwabena', 'Kwaku', 'Yaw', 'Kofi', 'Kwame'];
 const khanFemales = ['Akosua', 'Adwoa', 'Abenaa', 'Akua', 'Yaa', 'Afua', 'Ama'];
 function submitFunction(){
@@ -6,7 +5,7 @@ function submitFunction(){
   const formValues = getvalues(formElements); 
   dayValidation(formValues);
   monthValidation(formValues); 
-  gender(formValues);
+  assignGenderAndAkanName(formValues);
 
 };
 
@@ -44,7 +43,7 @@ function monthValidation(formValues){
 
 }
 
-function gender(formValues){
+function assignGenderAndAkanName(formValues){
    
     d = ( ( (formValues.century/4) -2*formValues.century-1) + ((5*formValues.year/4) ) 
   + ((26*(formValues.month+1)/10)) + formValues.day ) %7;
