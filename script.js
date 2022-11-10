@@ -4,7 +4,7 @@ const khanFemales = ['Akosua', 'Adwoa', 'Abenaa', 'Akua', 'Yaa', 'Afua', 'Ama'];
 function submitFunction(){
   const formElements = getFormElements();
   const formValues = getvalues(formElements); 
-  daychecker(formValues);
+  dayValidation(formValues);
   monthValidation(formValues); 
   gender(formValues);
 
@@ -31,7 +31,7 @@ function getvalues(input){
   return{century, year, month, day, male, female};
 }
 
-function daychecker(formValues){
+function dayValidation(formValues){
   if(formValues.day<=0 || formValues.day>31){
     alert("enter the correct day");
   }
