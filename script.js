@@ -45,9 +45,9 @@ function monthValidation(formValues){
 
 function assignGenderAndAkanName(formValues){
    
-    d = ( ( (formValues.century/4) -2*formValues.century-1) + ((5*formValues.year/4) ) 
+    dayCalculation = ( ( (formValues.century/4) -2*formValues.century-1) + ((5*formValues.year/4) ) 
   + ((26*(formValues.month+1)/10)) + formValues.day ) %7;
-   const birthDay = (Math.floor(d));
+   const birthDay = (Math.floor(dayCalculation));
 
     if (document.getElementById("male").checked == true) {
         if (birthDay == 0) {
