@@ -5,7 +5,7 @@ function submitFunction(){
   const formElements = getFormElements();
   const formValues = getvalues(formElements); 
   daychecker(formValues);
-  monthcheck(formValues); 
+  monthValidation(formValues); 
   gender(formValues);
 
 };
@@ -38,7 +38,7 @@ function daychecker(formValues){
 
 }
 
-function monthcheck(formValues){
+function monthValidation(formValues){
   if(formValues.month<=0 || formValues.month>12)
   alert("enter the correct month");
 
